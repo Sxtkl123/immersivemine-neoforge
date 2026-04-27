@@ -1,16 +1,13 @@
 package com.sxtkl.immersiveminer.linkage.jade;
 
 import com.sxtkl.immersiveminer.MineUtils;
-import com.sxtkl.immersiveminer.keybinding.KeyHandler;
 import com.sxtkl.immersiveminer.keybinding.LocalKeyHandler;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
-import snownee.jade.api.IServerDataProvider;
 import snownee.jade.api.ITooltip;
 import snownee.jade.api.config.IPluginConfig;
 

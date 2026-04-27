@@ -4,7 +4,6 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.api.distmarker.OnlyIn;
 
 
 public class KeyHandler {
