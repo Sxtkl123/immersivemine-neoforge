@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.HandlerThread;
@@ -44,5 +45,11 @@ public class KeyEvent {
             PacketDistributor.sendToServer(new KeyData(false));
             LocalKeyHandler.getInstance().setActivate(false);
         }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerExit(PlayerEvent.PlayerLoggedOutEvent evt) {
+        LocalKeyHandler.getInstance().setActivate(false);
+        KeyHandler.getInstance().inactivate(evt.getEntity());
     }
 }
