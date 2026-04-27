@@ -1,4 +1,4 @@
-package com.sxtkl.immersiveminer;
+package com.sxtkl.immersiveminer.utils;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

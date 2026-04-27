@@ -4,6 +4,8 @@
   "package": "com.sxtkl.immersiveminer.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BlockMixin",
+    "ServerPlayerGameModeMixin"
   ],
   "client": [
   ],

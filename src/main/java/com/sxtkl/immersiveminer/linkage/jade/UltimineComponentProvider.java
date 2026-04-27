@@ -1,6 +1,6 @@
 package com.sxtkl.immersiveminer.linkage.jade;
 
-import com.sxtkl.immersiveminer.MineUtils;
+import com.sxtkl.immersiveminer.utils.MineUtils;
 import com.sxtkl.immersiveminer.keybinding.LocalKeyHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -22,7 +22,7 @@ public enum UltimineComponentProvider implements IBlockComponentProvider {
         BlockPos pos = accessor.getPosition();
         int cnt = MineUtils.getUltimineSize(level, pos);
         if (cnt != -1) tooltip.add(Component.translatable("jade.immersiveminer.size", cnt));
-        else tooltip.add(Component.literal("jade.immersiveminer.too_large"));
+        else tooltip.add(Component.translatable("jade.immersiveminer.too_large"));
     }
 
     @Override
