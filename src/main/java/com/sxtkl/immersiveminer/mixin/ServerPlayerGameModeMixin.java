@@ -41,7 +41,7 @@ public abstract class ServerPlayerGameModeMixin {
     protected abstract boolean removeBlock(BlockPos pos, BlockState state, boolean canHarvest);
 
     @Inject(method = "destroyBlock", at = @At("HEAD"), cancellable = true)
-    public void injectDestroyBlock(BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+    public void inject$destroyBlock(BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         // 这里暂时直接拦截了整个方法的执行，一旦玩家处于连锁状态，会直接劫持原有逻辑。
         // 这样做可能并不是很优雅，具体是否需要修改需要考量和其他模组是否会产生严重冲突。
         if (!KeyHandler.getInstance().isActivate(player)) return;

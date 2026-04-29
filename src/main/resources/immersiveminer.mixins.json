@@ -8,6 +8,7 @@
     "ServerPlayerGameModeMixin"
   ],
   "client": [
+    "MultiPlayerGameModeMixin"
   ],
   "injectors": {
     "defaultRequire": 1
